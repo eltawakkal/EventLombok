@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="300dp">
+
+    <android.support.v7.widget.CardView
+        app:cardCornerRadius="10dp"
+        app:cardElevation="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ProgressBar
+                        android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <ImageView
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/wall_sample"
+                        android:id="@+id/imgEventBeranda"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp" />
+
+                    <View
+                        android:background="@drawable/gradient_ungu_biru"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <LinearLayout
+                        android:layout_alignParentBottom="true"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:elevation="3dp"
+                            android:layout_marginLeft="10sp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/user"
+                            android:id="@+id/imgUserBeranda"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp" />
+
+                        <LinearLayout
+                            android:padding="10dp"
+                            android:layout_gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/txtNamaEvent"
+                                android:textColor="@color/colorWhite"
+                                android:textStyle="bold"
+                                android:text="Material Design Meet 02"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:id="@+id/txtLokasi"
+                                android:textColor="@color/colorWhite"
+                                android:text="Gedung Balai Kota, Lombok"
+                                android:gravity="center_vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:id="@+id/txtTime"
+                                android:textColor="@color/colorWhite"
+                                android:text="21, sept 2018, 12:00"
+                                android:textSize="10sp"
+                                android:gravity="center_vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <!--<android.support.design.widget.FloatingActionButton-->
+                <!--android:id="@+id/fabFav"-->
+                <!--android:src="@drawable/love"-->
+                <!--android:layout_marginRight="10dp"-->
+                <!--app:layout_anchorGravity="bottom|right"-->
+                <!--app:layout_anchor="@id/imgEventBeranda"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content">-->
+
+            <!--</android.support.design.widget.FloatingActionButton>-->
+
+            <TextView
+                android:id="@+id/tvJenisEventBeranda"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:textColor="@color/colorWhite"
+                android:layout_alignParentRight="true"
+                android:layout_margin="10dp"
+                android:background="@drawable/rounded_accent"
+                android:text="Workshop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical" xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity">
+
+    <RelativeLayout
+        android:elevation="5dp"
+        android:id="@+id/rlActionBar"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <!--<ImageView-->
+            <!--android:id="@+id/imgMenu"-->
+            <!--android:padding="10dp"-->
+            <!--android:src="@drawable/menu"-->
+            <!--android:layout_width="50dp"-->
+            <!--android:layout_height="match_parent" />-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/lobster_two"
+            android:text="Event Lombok"
+            android:textColor="#FFF"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <!--<ImageView-->
+            <!--android:id="@+id/imgFilter"-->
+            <!--android:padding="10dp"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:src="@drawable/filter"-->
+            <!--android:layout_width="50dp"-->
+            <!--android:layout_height="match_parent" />-->
+
+    </RelativeLayout>
+
+    <!--<android.support.design.widget.TabLayout-->
+        <!--android:id="@+id/tabMain"-->
+        <!--app:tabIndicatorColor="#FFF"-->
+        <!--android:background="@color/colorPrimary"-->
+        <!--app:tabSelectedTextColor="#FFF"-->
+        <!--app:tabTextColor="#FFF"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+
+        <!--<android.support.design.widget.TabItem-->
+            <!--android:icon="@drawable/beranda"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" />-->
+
+        <!--<android.support.design.widget.TabItem-->
+            <!--android:icon="@drawable/love"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" />-->
+
+        <!--<android.support.design.widget.TabItem-->
+            <!--android:icon="@drawable/person"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" />-->
+
+    <!--</android.support.design.widget.TabLayout>-->
+
+    <!--<android.support.v4.view.ViewPager-->
+        <!--android:layout_marginTop="?attr/actionBarSize"-->
+        <!--android:id="@+id/view_pager_main"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_marginBottom="?attr/actionBarSize">-->
+
+    <!--</android.support.v4.view.ViewPager>-->
+
+    <FrameLayout
+        android:id="@+id/frgContainer"
+        android:layout_marginBottom="?attr/actionBarSize"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bnvBeranda"
+        android:background="@color/colorWhite"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/menu_bottom_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    </android.support.design.widget.BottomNavigationView>
+
+</RelativeLayout>

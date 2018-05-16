@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+
+        <!--<LinearLayout-->
+            <!--android:orientation="vertical"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent">-->
+
+            <!--<LinearLayout-->
+                <!--android:weightSum="2"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="200dp">-->
+
+                <!--<ImageView-->
+                    <!--android:src="@drawable/wall_sample"-->
+                    <!--android:scaleType="centerCrop"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="match_parent" />-->
+
+                <!--<ImageView-->
+                    <!--android:src="@drawable/panorama1"-->
+                    <!--android:scaleType="center"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="match_parent" />-->
+
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:weightSum="2"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="200dp">-->
+
+                <!--<ImageView-->
+                    <!--android:src="@drawable/kota1"-->
+                    <!--android:scaleType="centerCrop"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="match_parent" />-->
+
+                <!--<ImageView-->
+                    <!--android:src="@drawable/gunung1"-->
+                    <!--android:scaleType="center"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="match_parent" />-->
+
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:weightSum="2"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="200dp">-->
+
+                <!--<ImageView-->
+                    <!--android:src="@drawable/gunung2"-->
+                    <!--android:scaleType="centerCrop"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="match_parent" />-->
+
+                <!--<ImageView-->
+                    <!--android:src="@drawable/kota3"-->
+                    <!--android:scaleType="center"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="match_parent" />-->
+
+            <!--</LinearLayout>-->
+
+        <!--</LinearLayout>-->
+
+    <!--</ScrollView>-->
+
+    <android.support.design.widget.FloatingActionButton
+        app:fabSize="normal"
+        android:src="@drawable/pencil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dp">
+
+    <RelativeLayout
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/rlTglEventJoin"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:id="@+id/tvTglEventFav"
+            android:text="09"
+            android:textSize="30sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvBlnEventFav"
+            android:layout_below="@+id/tvTglEventFav"
+            android:text="Feb"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        
+    </RelativeLayout>
+    
+    <android.support.v7.widget.CardView
+        android:layout_marginBottom="5dp"
+        android:layout_toRightOf="@id/rlTglEventJoin"
+        android:layout_marginRight="10dp"
+        android:elevation="5dp"
+        app:cardBackgroundColor="@color/colorGreenLight"
+        app:cardCornerRadius="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <RelativeLayout
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvNamaEventFav"
+                        android:textColor="@color/colorWhite"
+                        android:text="Judul Kegiatan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tvLokEventFav"
+                        android:textColor="@color/colorWhite"
+                        android:text="Lokasi Kegiatan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tvWaktuEventFav"
+                        android:textColor="@color/colorWhite"
+                        android:text="20:30"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imgJenisJoin"
+                android:src="@drawable/competisi"
+                android:layout_alignParentRight="true"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

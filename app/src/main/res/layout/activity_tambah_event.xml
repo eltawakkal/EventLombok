@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.TambahEvent"
+    android:background="#DEDEDE"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imgEventTambah"
+        android:scaleType="centerCrop"
+        android:src="@drawable/discuss"
+        android:layout_width="match_parent"
+        android:layout_height="300dp" />
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:onClick="selectPicture"
+        app:fabSize="mini"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/pencil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+
+        <!--<LinearLayout-->
+            <!--android:orientation="vertical"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content">-->
+
+            <android.support.v7.widget.CardView
+                android:layout_alignParentBottom="true"
+                android:elevation="5dp"
+                android:layout_margin="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:background="@color/colorAccent"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"/>
+
+                <LinearLayout
+                    android:padding="20dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/editNamaEventTambah"
+                            android:inputType="text"
+                            android:hint="Nama Event"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_marginBottom="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:inputType="textLongMessage"
+                            android:id="@+id/editDeskripsiEventTambah"
+                            android:hint="Deskripsi Event"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <Spinner
+                        android:id="@+id/spinJenisEventTambah"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:entries="@array/jenisEvent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <LinearLayout
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:editable="false"
+                            android:id="@+id/editTglTambah"
+                            android:drawableRight="@drawable/event_selesai"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:padding="10dp"
+                            android:hint="Tanggal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" />
+
+                        <EditText
+                            android:editable="false"
+                            android:id="@+id/editWaktuTambah"
+                            android:hint="Waktu"
+                            android:drawableRight="@drawable/time"
+                            android:padding="10dp"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                    <EditText
+                        android:editable="false"
+                        android:id="@+id/editLokasiTambah"
+                        android:drawableRight="@drawable/location"
+                        android:layout_marginBottom="10dp"
+                        android:padding="10dp"
+                        android:hint="Lokasi Acara"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        android:id="@+id/btnPostEvent"
+                        android:text="Post Event"
+                        android:textColor="@color/colorWhite"
+                        android:background="@drawable/circle_accent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+        <!--</LinearLayout>-->
+
+    <!--</ScrollView>-->
+
+</RelativeLayout>
