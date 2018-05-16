@@ -68,4 +68,5 @@ public class UserEvent {
     public String getTglEvent() {
         return tglEvent;
     }
+
 }

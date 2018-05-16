@@ -51,6 +51,8 @@ public class Login extends AppCompatActivity {
 
         init();
 
+        cekUser();
+
         signInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -90,17 +92,15 @@ public class Login extends AppCompatActivity {
 
                     if (user == null) {
                         try {
-                            showPersetujuan(id, account.getDisplayName(), account.getEmail(), account.getPhotoUrl().toString());
+                            showPersetujuan(id, account.getDisplayName(), account.getEmail(), account.getPhotoUrl().toString(), "Member");
                         } catch (Exception e) {
-                            showPersetujuan(id, account.getDisplayName(), account.getEmail(), "noPhoto");
+                            showPersetujuan(id, account.getDisplayName(), account.getEmail(), "noPhoto", "Member");
                         }
                     } else {
-                        Toast.makeText(Login.this, "Key : " + id, Toast.LENGTH_SHORT).show();
-
                         try {
-                            myPref.setUser(id, account.getDisplayName(), account.getEmail(), account.getPhotoUrl().toString());
+                            myPref.setUser(id, account.getDisplayName(), account.getEmail(), account.getPhotoUrl().toString(), user.getStatus());
                         }catch (Exception e) {
-                            myPref.setUser(id, account.getDisplayName(), account.getEmail(), "noPhoto");
+                            myPref.setUser(id, account.getDisplayName(), account.getEmail(), "noPhoto", user.getStatus());
                         }
 
                         loggedIn();
@@ -117,14 +117,14 @@ public class Login extends AppCompatActivity {
         }
     }
 
-    public void signOut(View v) {
-        gsc.signOut().addOnCompleteListener(new OnCompleteListener<Void>() {
-            @Override
-            public void onComplete(@NonNull Task<Void> task) {
-                Toast.makeText(Login.this, "Signed Out", Toast.LENGTH_SHORT).show();
-            }
-        });
-    }
+//    public void signOut(View v) {
+//        gsc.signOut().addOnCompleteListener(new OnCompleteListener<Void>() {
+//            @Override
+//            public void onComplete(@NonNull Task<Void> task) {
+//                Toast.makeText(Login.this, "Signed Out", Toast.LENGTH_SHORT).show();
+//            }
+//        });
+//    }
 
     private void init() {
 
@@ -141,9 +141,13 @@ public class Login extends AppCompatActivity {
 
     public void cekUser() {
         gsa = GoogleSignIn.getLastSignedInAccount(this);
+        if (gsa != null) {
+            startActivity(new Intent(this, MainActivity.class));
+            finish();
+        }
     }
 
-    public void showPersetujuan(final String key, final String nama, final String email, final String photoUrl) {
+    public void showPersetujuan(final String key, final String nama, final String email, final String photoUrl, final String status) {
         View v = getLayoutInflater().inflate(R.layout.dialog_persetujuan, null);
 
         Button btRegister = v.findViewById(R.id.btRegister);
@@ -155,12 +159,12 @@ public class Login extends AppCompatActivity {
         btRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                User userAdd = new User(nama, email, photoUrl);
+                User userAdd = new User(nama, email, photoUrl, status);
 
                 String id = dbRefUser.push().getKey();
                 dbRefUser.child(id).setValue(userAdd);
 
-                myPref.setUser(key, nama, email, photoUrl);
+                myPref.setUser(key, nama, email, photoUrl, status);
 
                 loggedIn();
 

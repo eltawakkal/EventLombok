@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.thebestone.eventlombok.PreferencesEvent;
 import com.example.thebestone.eventlombok.R;
 import com.example.thebestone.eventlombok.activity.DetailsEvent;
 import com.example.thebestone.eventlombok.helper.PublicVar;
@@ -32,11 +33,15 @@ public class RecyclerEventBerandaQ extends RecyclerView.Adapter<RecyclerView.Vie
     List<UserEvent> userEvents;
     List<UserEvent> userEventsBackUp;
 
+    PreferencesEvent myPref;
+
     public RecyclerEventBerandaQ(Activity context, List<User> users, List<UserEvent> userEvents) {
         this.context = context;
         this.users = users;
         this.userEvents = userEvents;
         this.userEventsBackUp = userEvents;
+
+        myPref = new PreferencesEvent(context);
     }
 
     public void filterKab(String jenisEvent) {
@@ -83,6 +88,12 @@ public class RecyclerEventBerandaQ extends RecyclerView.Adapter<RecyclerView.Vie
             itemsViewHolder.txtLokasiEvent.setText(userEvents.get(position-1).getLokasiEvent());
             itemsViewHolder.txtWaktuEvent.setText(tglEvent);
             itemsViewHolder.tvJenisEvent.setText(userEvents.get(position-1).getJenisEvent());
+
+            if (myPref.getUserStatus().equals("Admin")) {
+                itemsViewHolder.imgDelete.setVisibility(View.VISIBLE);
+            } else {
+                itemsViewHolder.imgDelete.setVisibility(View.INVISIBLE);
+            }
 
             try {
                 Picasso.get().load(userEvents.get(position-1).getPhotoUser()).placeholder(R.mipmap.ic_launcher_round).resize(200, 200)
@@ -178,7 +189,7 @@ public class RecyclerEventBerandaQ extends RecyclerView.Adapter<RecyclerView.Vie
 
     class ItemsViewHolder extends RecyclerView.ViewHolder {
 
-        ImageView imgEvent, imgUser;
+        ImageView imgEvent, imgUser, imgDelete;
         TextView txtNamaEvent, txtLokasiEvent, txtWaktuEvent, tvJenisEvent;
         FloatingActionButton fabFav;
 
@@ -187,6 +198,7 @@ public class RecyclerEventBerandaQ extends RecyclerView.Adapter<RecyclerView.Vie
 
             imgEvent = v.findViewById(R.id.imgEventBeranda);
             imgUser = v.findViewById(R.id.imgUserBeranda);
+            imgDelete = v.findViewById(R.id.imgDeleteEventBeranda);
             txtNamaEvent = v.findViewById(R.id.txtNamaEvent);
             txtLokasiEvent = v.findViewById(R.id.txtLokasi);
             txtWaktuEvent = v.findViewById(R.id.txtTime);

@@ -24,16 +24,35 @@ public class PreferencesEvent {
         myPref = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
     }
 
-    public void setUser(String kodeUser, String name, String email, String imgUrl) {
+    public void setUser(String kodeUser, String name, String email, String imgUrl, String status) {
         editor = myPref.edit();
 
         editor
                 .putString("kodeUser", kodeUser)
                 .putString("nama", name)
                 .putString("email", email)
-                .putString("imgUrl", imgUrl);
+                .putString("imgUrl", imgUrl)
+                .putString("status", status);
 
         editor.commit();
+    }
+
+    public void deleteUser() {
+        editor = myPref.edit();
+        editor
+                .remove("kodeUser")
+                .remove("nama")
+                .remove("email")
+                .remove("imgUrl")
+                .remove("status");
+
+        editor.commit();
+    }
+
+    public String getUserStatus() {
+        String nama = "";
+        nama = myPref.getString("status", null);
+        return nama;
     }
 
     public String getUserName() {

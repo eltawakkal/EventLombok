@@ -60,7 +60,7 @@
                             android:layout_width="50dp"
                             android:layout_height="50dp" />
 
-                        <LinearLayout
+                        <RelativeLayout
                             android:padding="10dp"
                             android:layout_gravity="center_vertical"
                             android:orientation="vertical"
@@ -77,6 +77,7 @@
 
                             <TextView
                                 android:id="@+id/txtLokasi"
+                                android:layout_below="@id/txtNamaEvent"
                                 android:textColor="@color/colorWhite"
                                 android:text="Gedung Balai Kota, Lombok"
                                 android:gravity="center_vertical"
@@ -84,6 +85,7 @@
                                 android:layout_height="wrap_content" />
 
                             <TextView
+                                android:layout_below="@+id/txtLokasi"
                                 android:id="@+id/txtTime"
                                 android:textColor="@color/colorWhite"
                                 android:text="21, sept 2018, 12:00"
@@ -92,8 +94,15 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content" />
 
+                            <ImageView
+                                android:id="@+id/imgDeleteEventBeranda"
+                                android:src="@drawable/delete"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerInParent="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
 
-                        </LinearLayout>
+                        </RelativeLayout>
 
                     </LinearLayout>
 

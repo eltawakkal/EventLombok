@@ -132,7 +132,9 @@ public class RecyclerProfilAdapterQ extends RecyclerView.Adapter<RecyclerView.Vi
                         public void onComplete(@NonNull Task<Void> task) {
                             Toast.makeText(context, "Kamu Telah Keluar", Toast.LENGTH_SHORT).show();
 
+                            myPref.deleteUser();
                             context.startActivity(new Intent(context, Login.class));
+                            context.finish();
                         }
                     });
                 }
