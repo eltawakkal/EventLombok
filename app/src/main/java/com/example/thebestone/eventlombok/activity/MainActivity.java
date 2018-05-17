@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.example.thebestone.eventlombok.R;
 import com.example.thebestone.eventlombok.background.ServiceQ;
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     FrgFavorite frgFavorite;
     FrgProfile frgProfile;
     BottomNavigationView bottomNavigationView;
+    public static TextView tvLogo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -108,6 +110,8 @@ public class MainActivity extends AppCompatActivity {
 //    }
 
     private void init() {
+        tvLogo = findViewById(R.id.tvLogoMain);
+
         frgEvent = new FrgEvent();
         frgFavorite = new FrgFavorite();
         frgProfile = new FrgProfile();

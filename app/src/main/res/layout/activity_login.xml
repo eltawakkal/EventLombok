@@ -9,14 +9,9 @@
     android:orientation="vertical"
     android:gravity="center">
 
-    <!--<LinearLayout-->
-        <!--android:gravity="center"-->
-        <!--android:orientation="vertical"-->
-        <!--android:background="@color/colorPrimary"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="300dp">-->
-
     <TextView
+        android:id="@+id/tvLogoLogin"
+        android:transitionName="transLogo"
         android:textSize="40sp"
         android:fontFamily="@font/lobster_two"
         android:textColor="@color/colorWhite"
@@ -30,8 +25,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-    <!--</LinearLayout>-->
-
     <com.google.android.gms.common.SignInButton
         android:id="@+id/sign_button_login"
         android:layout_margin="30dp"
@@ -39,11 +32,5 @@
         android:layout_height="wrap_content">
 
     </com.google.android.gms.common.SignInButton>
-
-    <!--<Button-->
-        <!--android:text="SignOut"-->
-        <!--android:onClick="signOut"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content" />-->
 
 </LinearLayout>

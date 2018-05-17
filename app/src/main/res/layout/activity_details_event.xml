@@ -25,6 +25,7 @@
 
             <ImageView
                 android:id="@+id/imgEventDetail"
+                android:transitionName="transImgEvent"
                 android:scaleType="centerCrop"
                 android:src="@drawable/wall_sample"
                 android:layout_width="match_parent"

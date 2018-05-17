@@ -1,10 +1,14 @@
 package com.example.thebestone.eventlombok.adapter;
 
 import android.app.Activity;
+import android.app.ActivityOptions;
 import android.content.Intent;
+import android.os.Build;
 import android.support.annotation.NonNull;
+import android.support.annotation.RequiresApi;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.RecyclerView;
+import android.util.Pair;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -80,7 +84,7 @@ public class RecyclerEventBerandaQ extends RecyclerView.Adapter<RecyclerView.Vie
 
         if (holder instanceof ItemsViewHolder) {
 
-            ItemsViewHolder itemsViewHolder = (ItemsViewHolder)holder;
+            final ItemsViewHolder itemsViewHolder = (ItemsViewHolder)holder;
 
             String tglEvent = userEvents.get(position-1).getTglEvent() + ", " + userEvents.get(position-1).getWaktuEvent();
 
@@ -113,13 +117,15 @@ public class RecyclerEventBerandaQ extends RecyclerView.Adapter<RecyclerView.Vie
             }
 
             itemsViewHolder.imgEvent.setOnClickListener(new View.OnClickListener() {
+                @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
                 @Override
                 public void onClick(View view) {
+                    Pair pair = new Pair<View, String>(itemsViewHolder.imgEvent, "transImgEvent");
                     Intent intent = new Intent(context, DetailsEvent.class);
-
+                    ActivityOptions ao = ActivityOptions.makeSceneTransitionAnimation(context, pair);
                     PublicVar.userEventPublic = userEvents.get(position-1);
 
-                    context.startActivity(intent);
+                    context.startActivity(intent, ao.toBundle());
                 }
             });
 

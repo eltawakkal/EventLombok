@@ -1,14 +1,19 @@
 package com.example.thebestone.eventlombok.activity;
 
+import android.app.ActivityOptions;
 import android.app.Dialog;
 import android.content.Intent;
+import android.os.Build;
 import android.support.annotation.NonNull;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.util.Pair;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.thebestone.eventlombok.PreferencesEvent;
@@ -43,6 +48,7 @@ public class Login extends AppCompatActivity {
     PreferencesEvent myPref;
 
     SignInButton signInButton;
+    TextView tvLogo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -127,7 +133,7 @@ public class Login extends AppCompatActivity {
 //    }
 
     private void init() {
-
+        tvLogo = findViewById(R.id.tvLogoLogin);
         signInButton = findViewById(R.id.sign_button_login);
 
         dbRefUser = FirebaseDatabase.getInstance().getReference("users");
@@ -139,11 +145,11 @@ public class Login extends AppCompatActivity {
         gsc = GoogleSignIn.getClient(this, gso);
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     public void cekUser() {
         gsa = GoogleSignIn.getLastSignedInAccount(this);
         if (gsa != null) {
-            startActivity(new Intent(this, MainActivity.class));
-            finish();
+            loggedIn();
         }
     }
 
@@ -157,6 +163,7 @@ public class Login extends AppCompatActivity {
         dialog.show();
 
         btRegister.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(View view) {
                 User userAdd = new User(nama, email, photoUrl, status);
@@ -173,8 +180,14 @@ public class Login extends AppCompatActivity {
         });
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     public void loggedIn(){
-        startActivity(new Intent(this, MainActivity.class));
+        Pair[] pair = new Pair[1];
+        pair[0] = new Pair<View, String>(tvLogo, "transLogo");
+
+        Intent i = new Intent(this, MainActivity.class);
+        ActivityOptions ao = ActivityOptions.makeSceneTransitionAnimation(Login.this, pair);
+        startActivity(i, ao.toBundle());
         finish();
     }
 

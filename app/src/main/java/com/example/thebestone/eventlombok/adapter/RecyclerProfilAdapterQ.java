@@ -1,12 +1,16 @@
 package com.example.thebestone.eventlombok.adapter;
 
 import android.app.Activity;
+import android.app.ActivityOptions;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Build;
 import android.support.annotation.NonNull;
+import android.support.annotation.RequiresApi;
 import android.support.v7.widget.RecyclerView;
+import android.util.Pair;
 import android.view.LayoutInflater;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -22,6 +26,7 @@ import com.example.thebestone.eventlombok.PreferencesEvent;
 import com.example.thebestone.eventlombok.R;
 import com.example.thebestone.eventlombok.activity.DetailsEvent;
 import com.example.thebestone.eventlombok.activity.Login;
+import com.example.thebestone.eventlombok.activity.MainActivity;
 import com.example.thebestone.eventlombok.activity.TambahEvent;
 import com.example.thebestone.eventlombok.helper.PublicVar;
 import com.example.thebestone.eventlombok.models.UserEvent;
@@ -128,12 +133,16 @@ public class RecyclerProfilAdapterQ extends RecyclerView.Adapter<RecyclerView.Vi
                 @Override
                 public void onClick(View view) {
                     gsc.signOut().addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             Toast.makeText(context, "Kamu Telah Keluar", Toast.LENGTH_SHORT).show();
 
                             myPref.deleteUser();
-                            context.startActivity(new Intent(context, Login.class));
+                            Pair pair = new Pair<View, String> (MainActivity.tvLogo, "transLogo");
+                            Intent i = new Intent(context, Login.class);
+                            ActivityOptions ao = ActivityOptions.makeSceneTransitionAnimation(context, pair);
+                            context.startActivity(i, ao.toBundle());
                             context.finish();
                         }
                     });

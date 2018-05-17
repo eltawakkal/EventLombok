@@ -96,6 +96,7 @@
 
                             <ImageView
                                 android:id="@+id/imgDeleteEventBeranda"
+                                android:transitionName="transImgEvent"
                                 android:src="@drawable/delete"
                                 android:layout_alignParentRight="true"
                                 android:layout_centerInParent="true"
