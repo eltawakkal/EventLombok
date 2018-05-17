@@ -6,27 +6,7 @@
     </shared>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b2af1c8e-cdaa-4830-91d3-0382f8bc5dd8" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/thebestone/eventlombok/activity/Login.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/thebestone/eventlombok/activity/Login.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/thebestone/eventlombok/activity/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/thebestone/eventlombok/activity/MainActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/thebestone/eventlombok/adapter/RecyclerEventBerandaQ.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/thebestone/eventlombok/adapter/RecyclerEventBerandaQ.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/thebestone/eventlombok/adapter/RecyclerProfilAdapterQ.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/thebestone/eventlombok/adapter/RecyclerProfilAdapterQ.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_details_event.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_details_event.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/row_event_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/row_event_main.xml" />
-    </list>
+    <list default="true" id="b2af1c8e-cdaa-4830-91d3-0382f8bc5dd8" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
