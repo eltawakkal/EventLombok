@@ -71,7 +71,7 @@
                                 android:id="@+id/txtNamaEvent"
                                 android:textColor="@color/colorWhite"
                                 android:textStyle="bold"
-                                android:text="Material Design Meet 02"
+                                android:text="Material Designmmmmcm Meet 02"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content" />
 
