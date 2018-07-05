@@ -50,6 +50,7 @@ public class Login extends AppCompatActivity {
     SignInButton signInButton;
     TextView tvLogo;
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,7 +58,7 @@ public class Login extends AppCompatActivity {
 
         init();
 
-        cekUser();
+//        cekUser();
 
         signInButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,6 +86,7 @@ public class Login extends AppCompatActivity {
             Query query = dbRefUser.orderByChild("emailUser").equalTo(account.getEmail());
 
             query.addListenerForSingleValueEvent(new ValueEventListener() {
+                @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {
 
